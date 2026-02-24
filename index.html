@@ -134,21 +134,33 @@
         </div>
     </div>
     <script>
+        var U_HASH = '3dcabe691f3f1193a3ffa7aa38760ff19f964082c9adf1ec2a0a2cc74cda8302';
+        var P_HASH = '8c7b91f37c16ffa7c211fb357c6a2a10c08e4e930ed8fdd8ad098c6f74a26982';
+
         (function () {
             if (sessionStorage.getItem('auth') === 'ok') {
                 document.getElementById('login-overlay').classList.add('hidden');
             }
         })();
-        function doLogin() {
+
+        async function sha256(str) {
+            var buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+            return Array.from(new Uint8Array(buf)).map(function (b) { return b.toString(16).padStart(2, '0'); }).join('');
+        }
+
+        async function doLogin() {
             var u = document.getElementById('username').value;
             var p = document.getElementById('password').value;
-            if (u === 'ogun' && p === 'bilgili') {
+            var uh = await sha256(u);
+            var ph = await sha256(p);
+            if (uh === U_HASH && ph === P_HASH) {
                 sessionStorage.setItem('auth', 'ok');
                 document.getElementById('login-overlay').classList.add('hidden');
             } else {
                 document.getElementById('login-error').textContent = 'Invalid username or password.';
             }
         }
+
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Enter') doLogin();
         });
