@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ogün Bilgili - Development Topics</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: #f8f9fa;
+        }
+        header {
+            background: linear-gradient(135deg, #0f3460, #16213e);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        header p { opacity: 0.8; font-size: 1.1rem; }
+        nav {
+            background: #16213e;
+            padding: 0.75rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: #64ffda; }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid #0f3460;
+        }
+        .card h2 { color: #0f3460; margin-bottom: 0.5rem; }
+        .card p { color: #4a5568; }
+        .tag {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #0f3460;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            margin-right: 0.3rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ogün Bilgili</h1>
+        <p>Senior Software Developer — Development Topics & Notes</p>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/dynamics-crm">Dynamics CRM 365</a>
+        <a href="/ssis">SSIS</a>
+        <a href="/csharp">C#</a>
+        <a href="/sql">SQL</a>
+    </nav>
+    <main>
+        <div class="card">
+            <h2>Welcome</h2>
+            <p>
+                This site contains resolutions for issues I've encountered,
+                tips that are easy to forget, and highlighted notes from
+                courses and practice — all in one place for quick reference.
+            </p>
+        </div>
+        <div class="card">
+            <h2>Dynamics CRM 365</h2>
+            <p>Plugin development, FetchXML queries, Dataverse Web API patterns, and customization tips.</p>
+            <span class="tag">Dataverse</span>
+            <span class="tag">Plugins</span>
+            <span class="tag">Power Platform</span>
+        </div>
+        <div class="card">
+            <h2>SSIS</h2>
+            <p>Data migration patterns, KingswaySoft components, package troubleshooting, and performance tips.</p>
+            <span class="tag">ETL</span>
+            <span class="tag">KingswaySoft</span>
+            <span class="tag">SQL Server</span>
+        </div>
+        <div class="card">
+            <h2>C# & SQL</h2>
+            <p>Code snippets, stored procedure patterns, async programming, and .NET best practices.</p>
+            <span class="tag">.NET</span>
+            <span class="tag">T-SQL</span>
+            <span class="tag">LINQ</span>
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 Ogün Bilgili — Hosted on GitHub Pages
+    </footer>
+</body>
+</html>
